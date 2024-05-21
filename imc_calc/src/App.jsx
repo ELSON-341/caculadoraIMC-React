@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <div className="container">
-        <h2>IMG Calc</h2>
       <ImcCalc />
       </div>
     </>
