@@ -1,31 +1,39 @@
-h2 {
-    margin-bottom: 1rem;
-}
-#calc-container {
+#calc-container h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.form-inputs {
+#imc-form #form-inputs {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.form-controls {
+#imc-form #form-inputs .form-controls {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     flex: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
-.form-controls label {
+#imc-form #form-inputs .form-controls label {
     font-weight: bold;
-    margin-bottom: .6rem;
-    color: #ccc;
-    text-align: left;
+    margin-bottom: .5rem;
+    font-size: 17px;
 }
 
-.form-controls input {
-    padding: 1rem .5rem;
+#imc-form #form-inputs .form-controls input {
+    padding: .9rem 10px;
+    border-radius: 5px;
+    border: 0;
+    border: 1px solid black;
+}
+
+#action-control {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
 }
