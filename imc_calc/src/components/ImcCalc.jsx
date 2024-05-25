@@ -41,7 +41,7 @@ export const ImcCalc = ({ calcImac }) => {
             </div>
         </div>
         <div id="action-control">
-            <Button id="calc-btn" text="Calcular" action={calcImac}/>
+            <Button id="calc-btn" text="Calcular" action={(e) => calcImac(e, height, weight)}/>
             <Button id="clesr-btn" text="Limpar" action={clearForm}/>
         </div>
     </form>

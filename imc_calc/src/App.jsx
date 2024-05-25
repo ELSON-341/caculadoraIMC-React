@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-// import {data} from './data/tada.js'
 import {ImcCalc} from './components/ImcCalc.jsx'
+import {data} from './components/data/data.js'
 import { ImcTable } from './components/ImcTable.jsx'
 
 function App() {
   const calcImc = (e, height, weight) => {
     e.preventDefault()
-    console.log('Executou')
+    
+    if(!height || !weight) return
+
+    const weightFloat = +weight.replace(',', '.')
+    const heightFloat = +height.replace(',', '.')
+
+    const imcResult = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
+    setImc(imcResult);
   }
   
   const [imc, setImc] = useState('')
@@ -17,7 +24,7 @@ function App() {
   return (
     <>
       <div className="container">
-        {!imc ? <ImcCalc calcImac={calcImc}/> : <ImcTable />}
+        {!imc ? <ImcCalc calcImac={calcImc}/> : <ImcTable data={data}/>}
       </div>
     </>
   )
