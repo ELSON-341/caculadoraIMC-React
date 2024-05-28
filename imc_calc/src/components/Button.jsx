@@ -5,5 +5,5 @@ export const Button = ({ id, text, action }) => {
     action(e)
   }
   
-  return <button type="button" onClick={handleAction} id={id}>{text}</button>
+  return <button type="button" onClick={(e) => handleAction(e)} id={id}>{text}</button> 
 }

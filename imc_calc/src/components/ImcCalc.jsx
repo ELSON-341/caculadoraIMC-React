@@ -33,11 +33,11 @@ export const ImcCalc = ({ calcImac }) => {
         <div id="form-inputs">
             <div className="form-controls">
                 <label htmlFor="height">Altura:</label>
-                <input type="text" name='height' id='height' placeholder='Exemplo 1,25' onChange={(e) => handleHeightChange(e)} value={height || ''}/>
+                <input type="text" name='height' id='height' placeholder='Exemplo 1,25' onChange={(e) => handleHeightChange(e)} value={height}/>
             </div>
             <div className="form-controls">
                 <label htmlFor="weight">Peso:</label>
-                <input type="text" name='weight' id='weight' placeholder='Exemplo 70,25' onChange={(e) => handleWeightChange(e)} value={weight || ''}/>
+                <input type="text" name='weight' id='weight' placeholder='Exemplo 70,25' onChange={(e) => handleWeightChange(e)} value={weight}/>
             </div>
         </div>
         <div id="action-control">
